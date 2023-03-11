@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UFC-8">
+    <title>JSON to HTML Example</title>
+    <style>
+        table {
+          border-collapse:collapse;
+          width:auto;
+        }
+        th, td {
+          text-align: left;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          padding: 8px;
+          border-bottom: 1px solid #ddd;
+        }
+        th {
+          background-color: #4CAF58;
+          color: white;
+        }
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+      </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Position</th>
+                <th>Name</th>
+                <th>Score</th>
+                <th>Today</th>
+                <th>Thru</th>
+                <th>R1</th>
+                <th>R2</th>
+                <th>R3</th>
+                <th>R4</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+                <tr>
+                    <td>{{ i["position"] }}</td>
+                    <td>{{ i["nameParsed"] }}</td>
+                    <td>{{ i["score4"] }}</td>
+                    <td>{{ i["today"] }}</td>
+                    <td>{{ i["thru"] }}</td>
+                    <td>{{ i["score7"] }}</td>
+                    <td>{{ i["score8"] }}</td>
+                    <td>{{ i["score9"] }}</td>
+                    <td>{{ i["score10"] }}</td>
+                    <td>{{ i["total"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
