@@ -4,7 +4,6 @@ import pandas as pd
 import json
 
 
-
 soup = BeautifulSoup(requests.get('https://www.espn.com/golf/leaderboard/_/tour/pga').text, "html.parser")
 tournament_name = soup.find_all("h1", class_="headline headline__h1 Leaderboard__Event__Title")[0].text
 course_name = soup.find_all("div", class_="Leaderboard__Course__Location n8 clr-gray-04")[0].text
