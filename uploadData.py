@@ -28,28 +28,28 @@ if tournament_status == "Final":
         nameParsed = name[0] + ". " + name.split(" ")[1]
 
         score4 = rows[i].find_all("td", class_="Table__TD")[3].text.strip()
-        # print(score4)
+
 
         r1 = rows[i].find_all("td", class_="Table__TD")[4].text.strip()
-        # print(r1)
+
 
         r2 = rows[i].find_all("td", class_="Table__TD")[5].text.strip()
-        # print(r2)
+
 
         r3 = rows[i].find_all("td", class_="Table__TD")[6].text.strip()
-        # print(r3)
+
 
         r4 = rows[i].find_all("td", class_="Table__TD")[7].text.strip()
-        # print(r4)
+
 
         total = rows[i].find_all("td", class_="Table__TD")[8].text.strip()
-        # print(total)
+
 
         earnings = rows[i].find_all("td", class_="Table__TD")[9].text.strip()
-        # print(earnings)
+
 
         fedexPnts = rows[i].find_all("td", class_="Table__TD")[10].text.strip()
-        # print(fedexPnts)
+
 
         listObj = []
         with open('sample.json') as fp:
